@@ -50,12 +50,6 @@
               <input type="text" class="form-control">
             </div>
           </li>
-          <li class="nav-item">
-            <form class="search-form" action="#">
-              <i class="icon-search"></i>
-              <input type="search" class="form-control" placeholder="Search Here" title="Search here">
-            </form>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
               <i class="icon-mail icon-lg"></i>
@@ -320,11 +314,8 @@
               </li>
             </ul>
           </div>
-          <!-- chat tab ends -->
         </div>
       </div>
-      <!-- partial -->
-      <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
@@ -413,8 +404,8 @@
                   <div class="card-body">
                     <div class="d-sm-flex justify-content-between align-items-start">
                       <div>
-                        <h4 class="card-title card-title-dash">Pending Requests</h4>
-                       <p class="card-subtitle card-subtitle-dash">You have 50+ new requests</p>
+                        <h1 class="card-title">Documents</h1>
+                       <p class="card-subtitle card-subtitle-dash">1420 - Documents</p>
                       </div>
                     </div>
                     <div class="table-responsive  mt-1">
@@ -427,9 +418,10 @@
                                   <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i></label>
                               </div>
                             </th>
-                            <th>Customer</th>
-                            <th>Company</th>
-                            <th>Progress</th>
+                            <th>Id</th>
+                            <th>Document name</th>
+                            <th>Size</th>
+                            <th>Published By</th>
                             <th>Status</th>
                           </tr>
                         </thead>
@@ -443,7 +435,14 @@
                             </td>
                             <td>
                               <div class="d-flex ">
-                                <img src="images/faces/face1.jpg" alt="">
+                                <div>
+                                  <h6>1</h6>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex ">
+                                <img src="images/pdfff.png" alt="">
                                 <div>
                                   <h6>Brandon Washington</h6>
                                   <p>Head admin</p>
@@ -452,7 +451,6 @@
                             </td>
                             <td>
                               <h6>Company name 1</h6>
-                              <p>company type</p>
                             </td>
                             <td>
                               <div>
@@ -465,7 +463,9 @@
                                 </div>
                               </div>
                             </td>
-                            <td><div class="badge badge-opacity-warning">In progress</div></td>
+                            <td>
+                              <button class="btn mdi mdi-delete btn-fw" type="button"></button>
+                              <button class="btn btn-inverse-primary" type="button">View</button></td>
                           </tr>
                           <tr>
                             <td>
@@ -475,8 +475,15 @@
                               </div>
                             </td>
                             <td>
+                              <div class="d-flex ">
+                                <div>
+                                  <h6>2</h6>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
                               <div class="d-flex">
-                                <img src="images/faces/face2.jpg" alt="">
+                                <img src="images/pdfff.png" alt="">
                                 <div>
                                   <h6>Laura Brooks</h6>
                                   <p>Head admin</p>
@@ -485,7 +492,6 @@
                             </td>
                             <td>
                               <h6>Company name 1</h6>
-                              <p>company type</p>
                             </td>
                             <td>
                               <div>
@@ -498,7 +504,9 @@
                                 </div>
                               </div>
                             </td>
-                            <td><div class="badge badge-opacity-warning">In progress</div></td>
+                            <td>
+                              <button class="btn mdi mdi-delete btn-fw" type="button"></button>
+                              <button class="btn btn-inverse-primary" type="button">View</button></td>
                           </tr>
                           <tr>
                             <td>
@@ -508,8 +516,15 @@
                               </div>
                             </td>
                             <td>
+                              <div class="d-flex ">
+                                <div>
+                                  <h6>3</h6>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
                               <div class="d-flex">
-                                <img src="images/faces/face3.jpg" alt="">
+                                <img src="images/pdfff.png" alt="">
                                 <div>
                                   <h6>Wayne Murphy</h6>
                                   <p>Head admin</p>
@@ -518,7 +533,6 @@
                             </td>
                             <td>
                               <h6>Company name 1</h6>
-                              <p>company type</p>
                             </td>
                             <td>
                               <div>
@@ -531,7 +545,9 @@
                                 </div>
                               </div>
                             </td>
-                            <td><div class="badge badge-opacity-warning">In progress</div></td>
+                            <td>
+                              <button class="btn mdi mdi-delete btn-fw" type="button"></button>
+                              <button class="btn btn-inverse-primary" type="button">View</button></td>
                           </tr>
                           <tr>
                             <td>
@@ -541,8 +557,15 @@
                               </div>
                             </td>
                             <td>
+                              <div class="d-flex ">
+                                <div>
+                                  <h6>4</h6>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
                               <div class="d-flex">
-                                <img src="images/faces/face4.jpg" alt="">
+                                <img src="images/wrdd.png" alt="">
                                 <div>
                                   <h6>Matthew Bailey</h6>
                                   <p>Head admin</p>
@@ -551,7 +574,6 @@
                             </td>
                             <td>
                               <h6>Company name 1</h6>
-                              <p>company type</p>
                             </td>
                             <td>
                               <div>
@@ -564,7 +586,8 @@
                                 </div>
                               </div>
                             </td>
-                            <td><div class="badge badge-opacity-danger">Pending</div></td>
+                            <td><button class="btn mdi mdi-delete btn-fw" type="button"></button>
+                              <button class="btn btn-inverse-primary" type="button">View</button></td>
                           </tr>
                           <tr>
                             <td>
@@ -574,8 +597,15 @@
                               </div>
                             </td>
                             <td>
+                              <div class="d-flex ">
+                                <div>
+                                  <h6>5</h6>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
                               <div class="d-flex">
-                                <img src="images/faces/face5.jpg" alt="">
+                                <img src="images/wrdd.png" alt="">
                                 <div>
                                   <h6>Katherine Butler</h6>
                                   <p>Head admin</p>
@@ -584,7 +614,6 @@
                             </td>
                             <td>
                               <h6>Company name 1</h6>
-                              <p>company type</p>
                             </td>
                             <td>
                               <div>
@@ -597,7 +626,9 @@
                                 </div>
                               </div>
                             </td>
-                            <td><div class="badge badge-opacity-success">Completed</div></td>
+                            <td>
+                              <button class="btn mdi mdi-delete btn-fw" type="button"></button>
+                              <button class="btn btn-inverse-primary" type="button">View</button></td>
                           </tr>
                         </tbody>
                       </table>
@@ -609,8 +640,7 @@
         </div>
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
+           <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
           </div>
         </footer>
       </div>
