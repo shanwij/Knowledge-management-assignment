@@ -310,27 +310,21 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="indexReg.html">
               <i class="mdi mdi-grid-large menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="document.html">
+            <a class="nav-link" href="documentReg.html">
               <i class="menu-icon mdi mdi-file-document"></i>
               <span class="menu-title">Documents</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="search.html">
+            <a class="nav-link" href="searchReg.html">
               <i class="menu-icon mdi mdi-file-find"></i>
               <span class="menu-title">Version Control</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="admin.html">
-              <i class="menu-icon mdi mdi-account-key"></i>
-              <span class="menu-title">Administration</span>
             </a>
           </li>
         </ul>
@@ -352,7 +346,7 @@
                                 <form class="forms-sample">
                                   <div class="input-group">
                                     <div class="input-group col-xs-12">
-                                      <input type="text" class="form-control" placeholder="Type here to Search Users">
+                                      <input type="text" class="form-control" placeholder="Type here to Search">
                                       <span class="input-group-append">
                                         <button class="btn btn-inverse-primary btn-fw" type="button">Search</button>
                                       </span>
@@ -368,35 +362,34 @@
                           <div class="col-md-12 col-lg-12 grid-margin stretch-card">
                             <div class="card card-rounded">
                               <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle toggle-dark btn-lg mb-0 me-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select User Type</button>
+                                <button class="btn btn-secondary dropdown-toggle toggle-dark btn-lg mb-0 me-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Document Type</button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                                   <h6 class="dropdown-header">Select</h6>
-                                  <a class="dropdown-item" href="adminis.html">Admin</a>
-                                  <a class="dropdown-item" href="executive.html">Executive</a>
-                                  <a class="dropdown-item" href="regular.html">Regular</a>
+                                  <a class="dropdown-item" href="#">Pdf</a>
+                                  <a class="dropdown-item" href="#">Word</a>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <!-- <div class="col-lg-3 d-flex flex-column">
+                      <div class="col-lg-3 d-flex flex-column">
                         <div class="row">
                           <div class="col-md-12 col-lg-12 grid-margin stretch-card">
                             <div class="card card-rounded">
                               <div class="dropdown">
                                 <button class="btn btn-secondary dropdown-toggle toggle-dark btn-lg mb-0 me-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Size </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                  <h6 class="dropdown-header">Select Size</h6>
-                                  <a class="dropdown-item" href="#">0 < 1 mb</a>
-                                  <a class="dropdown-item" href="#">1 < 2 mb</a>
+                                  <h6 class="dropdown-header">Select Version</h6>
+                                  <a class="dropdown-item" href="#">0 < 1 </a>
+                                  <a class="dropdown-item" href="#">1 < 2 </a>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div> -->
-                      <!-- <div class="col-lg-3 d-flex flex-column">
+                      </div>
+                      <div class="col-lg-3 d-flex flex-column">
                         <div class="row">
                           <div class="col-md-12 col-lg-12 grid-margin stretch-card">
                             <div class="card card-rounded">
@@ -411,12 +404,12 @@
                             </div>
                           </div>
                         </div>
-                      </div> -->
+                      </div>
                       <div class="col-lg-3">
                         <ul class="navbar-nav ms-auto">
                         <li class="nav-item d-none d-lg-block">
                           <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
-                            <h6 class="dropdown-header">Added Date</h6>
+                            <h6 class="dropdown-header">Published Date</h6>
                             <span class="input-group-addon input-group-prepend border-right">
                               <span class="icon-calendar input-group-text calendar-icon"></span>
                             </span>
@@ -438,8 +431,8 @@
                   <div class="card-body">
                     <div class="d-sm-flex justify-content-between align-items-start">
                       <div>
-                        <h1 class="card-title">Users</h1>
-                       <p class="card-subtitle card-subtitle-dash">201 - Users</p>
+                        <h1 class="card-title">Documents</h1>
+                       <p class="card-subtitle card-subtitle-dash">1560 - Documents</p>
                       </div>
                     </div>
                     <div class="table-responsive  mt-1">
@@ -453,15 +446,125 @@
                               </div>
                             </th>
                             <th>Id</th>
-                            <th>User's name</th>
-                            <!-- <th>Size</th> -->
-                            <th>Role</th>
-                            <th>Added date</th>
+                            <th>Document name</th>
+                            <th>Version</th>
+                            <th>Published By</th>
+                            <th>Published date</th>
                             <th>Action</th>
                           </tr>
                         </thead>
                         <tbody>
-                          
+                          <tr>
+                            <td>
+                              <div class="form-check form-check-flat mt-0">
+                                <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i></label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex ">
+                                <div>
+                                  <h6>1</h6>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex ">
+                                <img src="images/pdfff.png" alt="">
+                                <div>
+                                  <h6>Support_Vector_Machines</h6>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <h6>0.1</h6>
+                            </td>
+                            <td>
+                              <div>
+                                <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
+                                  <p class="text-success">Me</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td><div>09/23/2021</div></td>
+                            <td>
+                              <button class="btn mdi mdi-delete btn-fw" type="button"></button>
+                              <button class="btn btn-inverse-primary" type="button">Archieve</button></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check form-check-flat mt-0">
+                                <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i></label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex ">
+                                <div>
+                                  <h6>2</h6>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex">
+                                <img src="images/pdfff.png" alt="">
+                                <div>
+                                  <h6>Laura Brooks</h6>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <h6>1.2</h6>
+                            </td>
+                            <td>
+                              <div>
+                                <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
+                                  <p class="text-success">Me</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td><div>09/23/2021</div></td>
+                            <td>
+                              <button class="btn mdi mdi-delete btn-fw" type="button"></button>
+                              <button class="btn btn-inverse-primary" type="button">Archieve</button></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check form-check-flat mt-0">
+                                <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i></label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex ">
+                                <div>
+                                  <h6>3</h6>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex">
+                                <img src="images/pdfff.png" alt="">
+                                <div>
+                                  <h6>Wayne Murphy</h6>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <h6>2.3</h6>
+                            </td>
+                            <td>
+                              <div>
+                                <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
+                                  <p class="text-success">Me</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td><div>09/23/2021</div></td>
+                            <td>
+                              <button class="btn mdi mdi-delete btn-fw" type="button"></button>
+                              <button class="btn btn-inverse-primary" type="button">Archieve</button></td>
+                          </tr>
                           <tr>
                             <td>
                               <div class="form-check form-check-flat mt-0">
@@ -478,25 +581,62 @@
                             </td>
                             <td>
                               <div class="d-flex">
-                                <img src="images/faces/face3.jpg" alt="">
+                                <img src="images/wrdd.png" alt="">
                                 <div>
-                                  <h6>Giwantha Wijekoon</h6>
+                                  <h6>Matthew Bailey</h6>
                                 </div>
                               </div>
                             </td>
-                            <!-- <td>
-                              <h6>86 kb</h6>
-                            </td> -->
+                            <td>
+                              <h6>0.5</h6>
+                            </td>
                             <td>
                               <div>
                                 <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
-                                  <p class="text-primary">Regular</p>
+                                  <p class="text-success">Me</p>
                                 </div>
                               </div>
                             </td>
                             <td><div>09/23/2021</div></td>
                             <td><button class="btn mdi mdi-delete btn-fw" type="button"></button>
-                              <button class="btn btn-inverse-primary" type="button">Change Role</button></td>
+                              <button class="btn btn-inverse-primary" type="button">Archieve</button></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check form-check-flat mt-0">
+                                <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i></label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex ">
+                                <div>
+                                  <h6>5</h6>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex">
+                                <img src="images/wrdd.png" alt="">
+                                <div>
+                                  <h6>Katherine Butler</h6>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <h6>1.2</h6>
+                            </td>
+                            <td>
+                              <div>
+                                <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
+                                  <p class="text-success">Me</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td><div>09/23/2021</div></td>
+                            <td>
+                              <button class="btn mdi mdi-delete btn-fw" type="button"></button>
+                              <button class="btn btn-inverse-primary" type="button">Archieve</button></td>
                           </tr>
                         </tbody>
                       </table>

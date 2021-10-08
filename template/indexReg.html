@@ -41,6 +41,14 @@
           </li>
         </ul>
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item d-none d-lg-block">
+            <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
+              <span class="input-group-addon input-group-prepend border-right">
+                <span class="icon-calendar input-group-text calendar-icon"></span>
+              </span>
+              <input type="text" class="form-control">
+            </div>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
               <i class="icon-mail icon-lg"></i>
@@ -310,41 +318,79 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="indexReg.html">
               <i class="mdi mdi-grid-large menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="document.html">
+            <a class="nav-link" href="documentReg.html">
               <i class="menu-icon mdi mdi-file-document"></i>
               <span class="menu-title">Documents</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="search.html">
+            <a class="nav-link" href="searchReg.html">
               <i class="menu-icon mdi mdi-file-find"></i>
               <span class="menu-title">Version Control</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="admin.html">
-              <i class="menu-icon mdi mdi-account-key"></i>
-              <span class="menu-title">Administration</span>
-            </a>
-          </li>
         </ul>
       </nav>
-      <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
             <div class="col-sm-12">
               <div class="home-tab">
+                <div class="d-sm-flex align-items-center justify-content-between border-bottom">
+                  <ul class="nav nav-tabs" role="tablist">
+                  </ul>
+                  <div class="d-sm-flex align-items-center justify-content-between border-bottom">
+                    <!-- <ul class="nav nav-tabs" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#audiences" role="tab" aria-selected="false">Audiences</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#demographics" role="tab" aria-selected="false">Demographics</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link border-0" id="more-tab" data-bs-toggle="tab" href="#more" role="tab" aria-selected="false">More</a>
+                      </li>
+                    </ul> -->
+                    <div>
+                      <div class="btn-wrapper">
+                        <a href="#" class="btn btn-otline-dark align-items-center"><i class="icon-share"></i> Share</a>
+                        <a href="#" class="btn btn-otline-dark"><i class="icon-printer"></i> Print</a>
+                        <a href="report.pdf" class="btn btn-primary text-white me-0" download><i class="icon-download"></i> Generate Reports</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="tab-content tab-content-basic">
                   <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview"> 
                     <div class="row">
-                      <div class="col-lg-12 d-flex flex-column">
+                      <div class="col-lg-8 stretch-card">
+                        <div class="card card-rounded">
+                          <div class="card-body">
+                            <div class="col-sm-11">
+                              <div class="statistics-details d-flex align-items-center justify-content-between">
+                                <div>
+                                  <p class="statistics-title">Total Documents</p>
+                                  <h3 class="rate-percentage">5</h3>
+                                </div>
+                                <div>
+                                  <p class="statistics-title">Folders</p>
+                                  <h3 class="rate-percentage">2</h3>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 d-flex flex-column">
                         <div class="row flex-grow">
                           <div class="col-md-6 col-lg-12 grid-margin stretch-card">
                             <div class="card card-rounded">
@@ -352,7 +398,7 @@
                                 <form class="forms-sample">
                                   <div class="input-group">
                                     <div class="input-group col-xs-12">
-                                      <input type="text" class="form-control" placeholder="Type here to Search Users">
+                                      <input type="text" class="form-control" placeholder="Type here to Search">
                                       <span class="input-group-append">
                                         <button class="btn btn-inverse-primary btn-fw" type="button">Search</button>
                                       </span>
@@ -363,67 +409,272 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-3 d-flex flex-column">
-                        <div class="row">
-                          <div class="col-md-12 col-lg-12 grid-margin stretch-card">
+                    </div> 
+                    <div class="row">
+                      <div class="col-lg-8 d-flex flex-column">
+                        <div class="row flex-grow">
+                          <div class="col-12 col-lg-4 col-lg-12 grid-margin stretch-card">
                             <div class="card card-rounded">
-                              <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle toggle-dark btn-lg mb-0 me-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select User Type</button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                  <h6 class="dropdown-header">Select</h6>
-                                  <a class="dropdown-item" href="adminis.html">Admin</a>
-                                  <a class="dropdown-item" href="executive.html">Executive</a>
-                                  <a class="dropdown-item" href="regular.html">Regular</a>
+                              <div class="card-body">
+                                <div class="d-sm-flex justify-content-between align-items-start">
+                                  <div>
+                                    <h4 class="card-title card-title-dash">New Documents</h4>
+                                   <p class="card-subtitle card-subtitle-dash">You have 10+ new Documents</p>
+                                  </div>
+                                </div>
+                                <div class="table-responsive  mt-1">
+                                  <table class="table select-table">
+                                    <thead>
+                                      <tr>
+                                        <th>
+                                          <div class="form-check form-check-flat mt-0">
+                                            <label class="form-check-label">
+                                              <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i></label>
+                                          </div>
+                                        </th>
+                                        <th>Document Name</th>
+                                        <th>Size</th>
+                                        <th>Published By</th>
+                                        <th>Date</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check form-check-flat mt-0">
+                                            <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i></label>
+                                          </div>
+                                        </td>
+                                        <td>
+                                          <div class="d-flex ">
+                                            <img src="images/pdfff.png" alt="">
+                                            <div>
+                                              <h6>Brandon Washington</h6>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td>
+                                          <h6>176 kb</h6>
+                                        </td>
+                                        <td>
+                                          <div>
+                                            <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
+                                              <p class="text-success">Me</p>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td><div>09/24/2021</div></td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check form-check-flat mt-0">
+                                            <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i></label>
+                                          </div>
+                                        </td>
+                                        <td>
+                                          <div class="d-flex">
+                                            <img src="images/pdfff.png" alt="">
+                                            <div>
+                                              <h6>Laura Brooks</h6>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td>
+                                          <h6>205 kb</h6>
+                                        </td>
+                                        <td>
+                                          <div>
+                                            <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
+                                              <p class="text-success">Me</p>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td><div>09/24/2021</div></td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check form-check-flat mt-0">
+                                            <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i></label>
+                                          </div>
+                                        </td>
+                                        <td>
+                                          <div class="d-flex">
+                                            <img src="images/pdfff.png" alt="">
+                                            <div>
+                                              <h6>Wayne Murphy</h6>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td>
+                                          <h6>98 kb</h6>
+                                        </td>
+                                        <td>
+                                          <div>
+                                            <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
+                                              <p class="text-success">Me</p>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td><div>09/24/2021</div></td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check form-check-flat mt-0">
+                                            <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i></label>
+                                          </div>
+                                        </td>
+                                        <td>
+                                          <div class="d-flex">
+                                            <img src="images/pdfff.png" alt="">
+                                            <div>
+                                              <h6>Matthew Bailey</h6>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td>
+                                          <h6>139 kb</h6>
+                                        </td>
+                                        <td>
+                                          <div>
+                                            <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
+                                              <p class="text-success">Me</p>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td><div>09/23/2021</div></td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check form-check-flat mt-0">
+                                            <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i></label>
+                                          </div>
+                                        </td>
+                                        <td>
+                                          <div class="d-flex">
+                                            <img src="images/pdfff.png" alt="">
+                                            <div>
+                                              <h6>Katherine Butler</h6>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td>
+                                          <h6>179 kb</h6>
+                                        </td>
+                                        <td>
+                                          <div>
+                                            <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
+                                              <p class="text-success">Me</p>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td><div>09/23/2021</div></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <!-- <div class="col-lg-3 d-flex flex-column">
-                        <div class="row">
-                          <div class="col-md-12 col-lg-12 grid-margin stretch-card">
+                      <div class="col-lg-4 d-flex flex-column">
+                        <div class="row flex-grow">
+                          <div class="col-md-6 col-lg-12 grid-margin stretch-card">
                             <div class="card card-rounded">
-                              <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle toggle-dark btn-lg mb-0 me-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Size </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                  <h6 class="dropdown-header">Select Size</h6>
-                                  <a class="dropdown-item" href="#">0 < 1 mb</a>
-                                  <a class="dropdown-item" href="#">1 < 2 mb</a>
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-sm-6">
+                                    <div class="d-flex justify-content-between align-items-center mb-2 mb-sm-0">
+                                      <div class="circle-progress-width">
+                                        <div id="totalVisitors" class="progressbar-js-circle pr-2"></div>
+                                      </div>
+                                      <div>
+                                        <p class="text-small mb-2">Disk Used</p>
+                                        <h4 class="mb-0 fw-bold">58.80%</h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-6">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div class="circle-progress-width">
+                                        <div id="visitperday" class="progressbar-js-circle pr-2"></div>
+                                      </div>
+                                      <div>
+                                        <p class="text-small mb-2">Uploads per day</p>
+                                        <h4 class="mb-0 fw-bold">37.8%</h4>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-lg-12 grid-margin stretch-card" hidden>
+                            <div class="card card-rounded">
+                              <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                  <h4 class="card-title card-title-dash">Activities</h4>
+                                </div>
+                                <ul class="bullet-line-list">
+                                  <li>
+                                    <div class="d-flex justify-content-between">
+                                      <div><span class="text-light-green">Ben Tossell</span> Upload the document</div>
+                                      <p>Just now</p>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="d-flex justify-content-between">
+                                      <div><span class="text-light-green">Oliver Noah</span> Update the document</div>
+                                      <p>1h</p>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="d-flex justify-content-between">
+                                      <div><span class="text-light-green">Jack William</span> Delete the document</div>
+                                      <p>1h</p>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="d-flex justify-content-between">
+                                      <div><span class="text-light-green">Leo Lucas</span> View the document</div>
+                                      <p>1h</p>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="d-flex justify-content-between">
+                                      <div><span class="text-light-green">Thomas Henry</span> Just login</div>
+                                      <p>1h</p>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="d-flex justify-content-between">
+                                      <div><span class="text-light-green">Will smith</span> Just login</div>
+                                      <p>1h</p>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="d-flex justify-content-between">
+                                      <div><span class="text-light-green">Jhon shane</span> Just login</div>
+                                      <p>1h</p>
+                                    </div>
+                                  </li>
+                                </ul>
+                                <div class="list align-items-center pt-3">
+                                  <div class="wrapper w-100">
+                                    <p class="mb-0">
+                                      <a href="#" class="fw-bold text-primary">Show all <i class="mdi mdi-arrow-right ms-2"></i></a>
+                                    </p>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div> -->
-                      <!-- <div class="col-lg-3 d-flex flex-column">
-                        <div class="row">
-                          <div class="col-md-12 col-lg-12 grid-margin stretch-card">
-                            <div class="card card-rounded">
-                              <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle toggle-dark btn-lg mb-0 me-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Language</button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                  <h6 class="dropdown-header">select language</h6>
-                                  <a class="dropdown-item" href="#">English</a>
-                                  <a class="dropdown-item" href="#">Sinhala</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div> -->
-                      <div class="col-lg-3">
-                        <ul class="navbar-nav ms-auto">
-                        <li class="nav-item d-none d-lg-block">
-                          <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
-                            <h6 class="dropdown-header">Added Date</h6>
-                            <span class="input-group-addon input-group-prepend border-right">
-                              <span class="icon-calendar input-group-text calendar-icon"></span>
-                            </span>
-                            <input type="text" class="form-control">
-                          </div>
-                        </li>
-                        </ul>
                       </div>
                     </div>
                   </div>
@@ -431,93 +682,17 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-12 d-flex flex-column">
-            <div class="row flex-grow">
-              <div class="col-12 grid-margin stretch-card">
-                <div class="card card-rounded">
-                  <div class="card-body">
-                    <div class="d-sm-flex justify-content-between align-items-start">
-                      <div>
-                        <h1 class="card-title">Users</h1>
-                       <p class="card-subtitle card-subtitle-dash">201 - Users</p>
-                      </div>
-                    </div>
-                    <div class="table-responsive  mt-1">
-                      <table class="table select-table">
-                        <thead>
-                          <tr>
-                            <th>
-                              <div class="form-check form-check-flat mt-0">
-                                <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i></label>
-                              </div>
-                            </th>
-                            <th>Id</th>
-                            <th>User's name</th>
-                            <!-- <th>Size</th> -->
-                            <th>Role</th>
-                            <th>Added date</th>
-                            <th>Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          
-                          <tr>
-                            <td>
-                              <div class="form-check form-check-flat mt-0">
-                                <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i></label>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="d-flex ">
-                                <div>
-                                  <h6>4</h6>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="d-flex">
-                                <img src="images/faces/face3.jpg" alt="">
-                                <div>
-                                  <h6>Giwantha Wijekoon</h6>
-                                </div>
-                              </div>
-                            </td>
-                            <!-- <td>
-                              <h6>86 kb</h6>
-                            </td> -->
-                            <td>
-                              <div>
-                                <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
-                                  <p class="text-primary">Regular</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td><div>09/23/2021</div></td>
-                            <td><button class="btn mdi mdi-delete btn-fw" type="button"></button>
-                              <button class="btn btn-inverse-primary" type="button">Change Role</button></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
         </div>
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
-           <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
           </div>
         </footer>
       </div>
     </div>
   </div>
+
   <script src="vendors/js/vendor.bundle.base.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="vendors/chart.js/Chart.min.js"></script>
   <script src="vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
   <script src="vendors/progressbar.js/progressbar.min.js"></script>
